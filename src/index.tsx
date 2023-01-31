@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
+import './i18n';
 import './index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -11,6 +13,9 @@ root.render(
     <GoogleOAuthProvider clientId="694623864346-pqhuo7fr26ll6s2p08gdificdd040q6a.apps.googleusercontent.com">
       <App />
     </GoogleOAuthProvider>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </React.StrictMode>
 );
 
