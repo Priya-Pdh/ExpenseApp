@@ -1,6 +1,6 @@
 import React from 'react';
-import ExpenseList from '../../components/expenseList/expenseList';
-import './expensePage.scss';
+import ExpenseList from '../../components/ExpenseList';
+import './style.scss';
 
 export default function ExpensePage() {
   return (

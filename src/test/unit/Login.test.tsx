@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen } from '../../test-utils';
-import Login from '../../pages/login';
+import Login from '../../pages/Login';
 
 describe('Login Component', () => {
   test('Should have login with google', () => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import './expenseList.scss';
+import './style.scss';
 
 export default function ExpenseList() {
   return (

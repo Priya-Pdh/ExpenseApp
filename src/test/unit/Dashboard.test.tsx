@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen } from '../../test-utils';
-import Dashboard from '../../pages/dashboard';
+import Dashboard from '../../pages/Dashboard';
 
 describe('Dashboard Component', () => {
   test('Should have the two main sections', () => {

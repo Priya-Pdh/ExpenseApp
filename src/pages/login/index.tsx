@@ -1,5 +1,5 @@
 import React from 'react';
-import GoogleAuth from '../../components/googleAuth/googleAuth';
+import GoogleAuth from '../../components/GoogleAuth';
 import './style.scss';
 import logo from '../../assets/logo-hs.png';
 import { useTranslation } from 'react-i18next';

@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen } from '../../test-utils';
-import Navbar from '../../features/navbar';
+import Navbar from '../../features/Navbar';
 
 describe('Navbar Component', () => {
   test('Should have 5 links', () => {
