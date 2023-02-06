@@ -1,4 +1,11 @@
 {
-  "login_with_google": "Login with Google",
-  "all_expenses_nav_item_label": "All Expenses"
+  "login_with_google": "Log in with Google",
+  "language": "Language",
+  "dashboard": "Dashboard",
+  "all_expense_reports": "All expense reports",
+  "all_purchase_requests": "All purchase requests",
+  "report_expense": "Report expense",
+  "create_purchase_request": "Create purchase request",
+  "last_entries": "Last 10 entries",
+  "month_overview": "Monthly overview"
 }

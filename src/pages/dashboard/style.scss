@@ -1,0 +1,28 @@
+@import '../../styles/_colors.scss';
+
+.dashboard {
+  height: 100vh;
+  background-color: #fafbfd;
+  display: flex;
+
+  main {
+    width: 100%;
+    height: calc(100% - 40px);
+    margin: 20px;
+    display: flex;
+    gap: 20px;
+  }
+
+  section {
+    width: calc(50% - 10px);
+    box-shadow: 3px 3px 10px rgb(198, 198, 198);
+    background-color: white;
+  }
+
+  header {
+    padding: 10px;
+    font-size: 1.5rem;
+    border-bottom: 2px solid $secondary_color;
+    color: gray;
+  }
+}
