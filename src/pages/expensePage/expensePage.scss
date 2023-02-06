@@ -1,0 +1,25 @@
+.expense_img {
+    width: 100%;
+    height: 200px;
+    position: relative;
+}
+
+.expense_page_container {
+    background-color: white;
+    
+    }
+.expense_page_header {
+    color: black;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 10%;
+   
+}
+.filters {
+    color: black;
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-start;
+    gap: 5%;
+    margin-left: 8%;
+}
