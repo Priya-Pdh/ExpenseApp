@@ -29,7 +29,7 @@ export default function Navbar() {
           <NavLink to="/dashboard">{t('dashboard')}</NavLink>
         </li>
         <li>
-          <NavLink to="/expenses">{t('all_expense_reports')}</NavLink>
+          <NavLink to="/expensepage">{t('all_expense_reports')}</NavLink>
         </li>
         <li>
           <NavLink to="/requests">{t('all_purchase_requests')}</NavLink>

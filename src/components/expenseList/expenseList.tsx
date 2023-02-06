@@ -15,7 +15,7 @@ export default function ExpenseList() {
             <th>Status</th>
           </tr>
           <tr>
-            <td />
+            <td>toilte paper</td>
             <td />
             <td />
             <td />
