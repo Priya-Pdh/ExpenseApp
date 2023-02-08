@@ -1,0 +1,35 @@
+.new_expense_container {
+    margin: 10% 30% 0 30%;
+    padding: 0 10% 5% 10%;
+    border: 1px solid gray;
+    box-shadow: 8px 8px 5px #aaaaaa;
+}
+
+.new_expense_heading {
+    margin-bottom: 20%;
+    text-align: center;
+}
+
+.first_three_label {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4%;
+}
+
+.last_two_label {
+    display: flex;
+    justify-content: center;
+}
+
+
+.form_input {
+    margin: 2%;
+    width: 100%;
+}
+
+.submit_button {
+    margin-left: 25%;
+    margin-top: 10%;
+    width: 40%;
+    height: 30px;
+}

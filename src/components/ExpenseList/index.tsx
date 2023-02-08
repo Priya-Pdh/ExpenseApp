@@ -11,7 +11,7 @@ export default function ExpenseList() {
             <th>Amount</th>
             <th>Category</th>
             <th>Date</th>
-            <th>Reciept</th>
+            <th>Receipt</th>
             <th>Status</th>
           </tr>
           <tr>
