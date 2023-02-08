@@ -36,12 +36,12 @@ export default function ExpenseList() {
             </th>
           </tr>
           <tr>
-            <td>toilte paper</td>
+            <td>Mouse</td>
+            <td>250</td>
+            <td>Electronics</td>
+            <td>2023-01-25</td>
             <td />
-            <td />
-            <td />
-            <td />
-            <td />
+            <td>Pending</td>
           </tr>
         </table>
       </div>
