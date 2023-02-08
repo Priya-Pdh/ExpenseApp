@@ -1,6 +1,12 @@
 import React from 'react';
 import './style.scss';
 
+import { BiCategory } from 'react-icons/bi';
+import { CgCalendarDates } from 'react-icons/cg';
+import { BsHash } from 'react-icons/bs';
+import { GrAttachment } from 'react-icons/gr';
+import { TbLoader } from 'react-icons/tb';
+
 export default function ExpenseList() {
   return (
     <>
@@ -8,11 +14,26 @@ export default function ExpenseList() {
         <table className="table_wrapper">
           <tr>
             <th>Expense</th>
-            <th>Amount</th>
-            <th>Category</th>
-            <th>Date</th>
-            <th>Receipt</th>
-            <th>Status</th>
+            <th>
+              <BsHash />
+              Amount
+            </th>
+            <th>
+              <BiCategory />
+              Category
+            </th>
+            <th>
+              <CgCalendarDates />
+              Date
+            </th>
+            <th>
+              <GrAttachment />
+              Reciept
+            </th>
+            <th>
+              <TbLoader />
+              Status
+            </th>
           </tr>
           <tr>
             <td>toilte paper</td>
