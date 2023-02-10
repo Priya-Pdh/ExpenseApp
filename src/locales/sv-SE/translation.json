@@ -9,5 +9,16 @@
   "report_expense": "Rapportera utgift",
   "create_purchase_request": "Skapa köpförfrågan",
   "last_entries": "Senaste 10 inlägg",
-  "month_overview": "Månadsöversikt"
+  "month_overview": "Månadsöversikt",
+
+  "expense_tracker":"Utgiftsspårare",
+  "all_expenses":"Alla utgifter",
+  "filter":"Filtrera",
+
+  "expense":"Bekostnad",
+  "amount":"Belopp",
+  "date":"Datum",
+  "category":"Kategori",
+  "receipt":"Mottagande",
+  "status":"Status"
 }

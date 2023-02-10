@@ -9,5 +9,16 @@
   "report_expense": "Report expense",
   "create_purchase_request": "Create request",
   "last_entries": "Last 10 entries",
-  "month_overview": "Monthly overview"
+  "month_overview": "Monthly overview",
+
+  "expense_tracker":"Expense Tracker",
+  "all_expenses":"All Expenses",
+  "filter":"Filter",
+
+  "expense":"Expense",
+  "amount":"Amount",
+  "date":"Date",
+  "category":"Category",
+  "receipt":"Receipt",
+  "status":"Status"
 }

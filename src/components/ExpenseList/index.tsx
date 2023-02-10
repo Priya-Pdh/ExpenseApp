@@ -1,5 +1,6 @@
 import React from 'react';
 import './style.scss';
+import { useTranslation } from 'react-i18next';
 
 import { BiCategory } from 'react-icons/bi';
 import { CgCalendarDates } from 'react-icons/cg';
@@ -8,32 +9,18 @@ import { GrAttachment } from 'react-icons/gr';
 import { TbLoader } from 'react-icons/tb';
 
 export default function ExpenseList() {
+  const { t } = useTranslation();
   return (
     <>
       <div className="table_container">
         <table className="table_wrapper">
           <tr>
-            <th>Expense</th>
-            <th>
-              <BsHash />
-              Amount
-            </th>
-            <th>
-              <BiCategory />
-              Category
-            </th>
-            <th>
-              <CgCalendarDates />
-              Date
-            </th>
-            <th>
-              <GrAttachment />
-              Reciept
-            </th>
-            <th>
-              <TbLoader />
-              Status
-            </th>
+            <th>{t('expense')}</th>
+            <th><BsHash /> {t('amount')}</th>
+            <th><BiCategory /> {t('category')}</th>
+            <th><CgCalendarDates /> {t('date')}</th>
+            <th><GrAttachment /> {t('receipt')}</th>
+            <th> <TbLoader /> {t('status')}</th>
           </tr>
           <tr>
             <td>Mouse</td>
