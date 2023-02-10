@@ -1,6 +1,6 @@
 import React from 'react';
 import './style.scss';
-import logo from '../../assets/logo-hs.png';
+import logo from '../../assets/images/logo-hs.png';
 import { useTranslation } from 'react-i18next';
 import { NavLink } from 'react-router-dom';
 
