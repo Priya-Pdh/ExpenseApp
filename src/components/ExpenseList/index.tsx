@@ -16,11 +16,22 @@ export default function ExpenseList() {
         <table className="table_wrapper">
           <tr>
             <th>{t('expense')}</th>
-            <th><BsHash /> {t('amount')}</th>
-            <th><BiCategory /> {t('category')}</th>
-            <th><CgCalendarDates /> {t('date')}</th>
-            <th><GrAttachment /> {t('receipt')}</th>
-            <th> <TbLoader /> {t('status')}</th>
+            <th>
+              <BsHash /> {t('amount')}
+            </th>
+            <th>
+              <BiCategory /> {t('category')}
+            </th>
+            <th>
+              <CgCalendarDates /> {t('date')}
+            </th>
+            <th>
+              <GrAttachment /> {t('receipt')}
+            </th>
+            <th>
+              {' '}
+              <TbLoader /> {t('status')}
+            </th>
           </tr>
           <tr>
             <td>Mouse</td>
