@@ -2,11 +2,11 @@
 
 .dashboard {
   height: 100vh;
-  background-color: #fafbfd;
+  background-color: $background_color;
   display: flex;
 
   main {
-    width: 100%;
+    flex: 1;
     height: calc(100% - 40px);
     margin: 20px;
     display: flex;

@@ -23,3 +23,6 @@ yarn-debug.log*
 yarn-error.log*
 .idea
 coverage/
+
+# linux-specific stuff for tõnis
+.directory

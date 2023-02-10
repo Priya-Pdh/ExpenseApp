@@ -1,23 +1,24 @@
 @import '../../styles/_colors.scss';
 
 .navbar {
+  min-width: 230px;
   width: 15%;
   height: 100%;
-  background-color: $primary-color;
+  background-color: $primary_color;
   color: white;
   font-size: 1.1rem;
   box-shadow: 3px 0px 10px grey;
+  padding: 20px 0;
 }
 
 .navlist {
   width: 80%;
-  padding: 0;
+  height: 100%;
   margin: auto;
   list-style-type: none;
-
-  li {
-    margin: 10px 0;
-  }
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 
   img {
     width: 100%;
@@ -39,13 +40,26 @@
 
   hr {
     height: 2px;
-    width: 70%;
-    margin: 20px auto;
-    background-color: rgba(255, 255, 255, 0.507);
+    width: 80%;
+    margin: 10px auto;
+    background-color: rgba(255, 255, 255, 0.884);
     border-radius: 30%;
   }
 
   .active {
     font-weight: bold;
+  }
+
+  .navlink {
+    display: flex;
+    align-items: center;
+
+    svg {
+      margin-right: 3px;
+    }
+  }
+
+  .spacer {
+    flex: 1;
   }
 }

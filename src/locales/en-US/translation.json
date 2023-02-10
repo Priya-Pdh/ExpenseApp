@@ -1,11 +1,13 @@
 {
+  "welcome_message": "Welcome to the expense tracker!",
   "login_with_google": "Log in with Google",
+  "logout": "Log out",
   "language": "Language",
   "dashboard": "Dashboard",
-  "all_expense_reports": "All expense reports",
-  "all_purchase_requests": "All purchase requests",
+  "expense_reports": "Expense reports",
+  "purchase_requests": "Purchase requests",
   "report_expense": "Report expense",
-  "create_purchase_request": "Create purchase request",
+  "create_purchase_request": "Create request",
   "last_entries": "Last 10 entries",
   "month_overview": "Monthly overview"
 }
