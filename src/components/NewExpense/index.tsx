@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import './style.scss';
-import { useNavigate } from 'react-router-dom';
 import { NewExpenseProps } from '../../types/Types';
 
+import { CgClose } from 'react-icons/cg';
 type Props = {
   onClick: (data: NewExpenseProps) => void;
 };
@@ -15,7 +15,7 @@ export default function NewExpense(props: Props) {
   const [receipt, setReceipt] = useState('');
   const [status, setStatus] = useState('');
 
-  const navigate = useNavigate();
+  const [hide, setHide] = useState(true);
 
   const { onClick } = props;
 
@@ -31,87 +31,93 @@ export default function NewExpense(props: Props) {
       status: status,
     };
     onClick(data);
-
-    navigate('/expensepage');
   };
 
   return (
     <>
-      <div className="new_expense_container">
-        <h1 className="new_expense_heading">New Expense</h1>
-        <form onSubmit={onSubmit}>
-          <div className="form_container">
-            <label className="form_input">
-              Expense
-              <input
-                type="text"
-                required
-                value={expense}
-                onChange={(e) => setExpense(e.target.value)}
-              />
-            </label>
-            <label className="form_input">
-              Amount
-              <input
-                type="number"
-                required
-                value={amount}
-                onChange={(e) => setAmount(e.target.value)}
-              />
-            </label>
-
-            <label className="form_input">
-              Date
-              <input
-                type="calender"
-                required
-                value={date}
-                onChange={(e) => setDate(e.target.value)}
-              />
-            </label>
-
-            <label className="form_input" id="select_category">
-              Category
-              <select
-                name="Category"
-                value={category}
-                onChange={(e) => setCategory(e.target.value)}
-              >
-                <option value="select">--Select--</option>
-                <option value="travel">Travel</option>
-                <option value="food">Food</option>
-                <option value="rent">Rent</option>
-                <option value="salaries">Salaries</option>
-                <option value="maintaine">Maintenance and Repairs</option>
-                <option value="others">others</option>
-              </select>
-            </label>
-
-            <label className="form_input">
-              Receipt
-              <input
-                type="file"
-                required
-                value={receipt}
-                onChange={(e) => setReceipt(e.target.value)}
-              />
-            </label>
-
-            <label className="form_input">
-              Status
-              <input
-                type="text"
-                required
-                value={status}
-                onChange={(e) => setStatus(e.target.value)}
-              />
-            </label>
+      {hide && (
+        <div className="new_expense_container">
+          <div className="close_icon">
+            <button onClick={() => setHide(!hide)}>
+              <CgClose />
+            </button>
           </div>
-          <button value="submit" className="submit_button">
-            Submit
-          </button>
-        </form>
-      </div>
+
+          <h1 className="new_expense_heading">New Expense</h1>
+          <form onSubmit={onSubmit}>
+            <div className="form_container">
+              <label className="form_input">
+                Expense
+                <input
+                  type="text"
+                  required
+                  value={expense}
+                  onChange={(e) => setExpense(e.target.value)}
+                />
+              </label>
+              <label className="form_input">
+                Amount
+                <input
+                  type="number"
+                  required
+                  value={amount}
+                  onChange={(e) => setAmount(e.target.value)}
+                />
+              </label>
+
+              <label className="form_input">
+                Date
+                <input
+                  type="calender"
+                  required
+                  value={date}
+                  onChange={(e) => setDate(e.target.value)}
+                />
+              </label>
+
+              <label className="form_input" id="select_category">
+                Category
+                <select
+                  name="Category"
+                  value={category}
+                  onChange={(e) => setCategory(e.target.value)}
+                >
+                  <option value="select">--Select--</option>
+                  <option value="travel">Travel</option>
+                  <option value="food">Food</option>
+                  <option value="rent">Rent</option>
+                  <option value="salaries">Salaries</option>
+                  <option value="maintaine">Maintenance and Repairs</option>
+                  <option value="others">others</option>
+                </select>
+              </label>
+
+              <label className="form_input">
+                Receipt
+                <input
+                  type="file"
+                  required
+                  value={receipt}
+                  onChange={(e) => setReceipt(e.target.value)}
+                />
+              </label>
+
+              <label className="form_input">
+                Status
+                <input
+                  type="text"
+                  required
+                  value={status}
+                  onChange={(e) => setStatus(e.target.value)}
+                />
+              </label>
+            </div>
+            <button value="submit" className="submit_button">
+              Submit
+            </button>
+          </form>
+        </div>
+      )}
     </>
   );
 }
