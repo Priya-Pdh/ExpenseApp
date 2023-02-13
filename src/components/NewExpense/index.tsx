@@ -39,8 +39,10 @@ export default function NewExpense(props: Props) {
     <>
       <div className="new_expense_container">
         <h1 className="new_expense_heading">New Expense</h1>
+        
         <form onSubmit={onSubmit}>
-          <div className="first_three_label">
+          <div className="form_container">
+
             <label className="form_input">
               Expense
               <input
@@ -69,9 +71,7 @@ export default function NewExpense(props: Props) {
                 onChange={(e) => setDate(e.target.value)}
               />
             </label>
-          </div>
 
-          <div className="last_two_label">
             <label className="form_input" id="select_category">
               Category
               <select
