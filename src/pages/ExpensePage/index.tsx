@@ -11,6 +11,8 @@ import NewExpense from '../../components/NewExpense';
 
 export default function ExpensePage() {
   const [newExpenseList, setNewExpenseList] = useState([] as NewExpenseProps[]);
+  const [showForm, setShowForm] = useState(false);
+
   const { t } = useTranslation();
 
   const addNewExpense = (data: NewExpenseProps) => {
@@ -27,13 +29,12 @@ export default function ExpensePage() {
         <ul className="filters">
           <li className="filters_list">{t('all_expenses')}</li>
           <li className="filters_list">{t('filter')}</li>
-        </ul>
-        <ul>
           <li>
-            <button>Add New Expense</button>
+            <button onClick={() => setShowForm(!showForm)}>Add New Expense</button>
           </li>
         </ul>
-        <NewExpense onClick={addNewExpense} />
+        {showForm && <NewExpense onClick={addNewExpense} />}
+
         <ExpenseList expenseList={newExpenseList} />
       </main>
     </div>

@@ -39,10 +39,8 @@ export default function NewExpense(props: Props) {
     <>
       <div className="new_expense_container">
         <h1 className="new_expense_heading">New Expense</h1>
-        
         <form onSubmit={onSubmit}>
           <div className="form_container">
-
             <label className="form_input">
               Expense
               <input
