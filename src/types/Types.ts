@@ -1,8 +1,9 @@
-export interface NewExpenseProps {
+export type NewExpenseProps = {
+  id: string;
   expense: string;
-  amount: number;
-  date: number;
+  amount?: string;
+  date?: string;
   category: string;
-  receipt: string;
+  receipt?: string;
   status: string;
-}
+};

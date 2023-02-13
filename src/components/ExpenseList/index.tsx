@@ -8,8 +8,16 @@ import { BsHash } from 'react-icons/bs';
 import { GrAttachment } from 'react-icons/gr';
 import { TbLoader } from 'react-icons/tb';
 
-export default function ExpenseList() {
+import { NewExpenseProps } from '../../types/Types';
+
+type ExpenseListProps = {
+  expenseList: NewExpenseProps[];
+};
+
+export default function ExpenseList(props: ExpenseListProps) {
+  const { expenseList } = props;
   const { t } = useTranslation();
+
   return (
     <>
       <div className="table_container">
@@ -41,6 +49,20 @@ export default function ExpenseList() {
             <td />
             <td>Pending</td>
           </tr>
+
+          {expenseList.map((expense) => {
+            return (
+              <tr key={expense.id}>
+                <td>{expense.expense}</td>
+                <td>{expense.amount}</td>
+                <td>{expense.category}</td>
+                <td>{expense.date}</td>
+                <td>{expense.receipt}</td>
+              </tr>
+            );
+          })}
+
+          <tr />
         </table>
       </div>
     </>
