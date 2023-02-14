@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { Fragment, useState } from 'react';
 import './style.scss';
 import { NewExpenseProps } from '../../types/Types';
 
@@ -36,49 +36,51 @@ export default function NewExpense(props: Props) {
   return (
     <>
       {hide && (
-        <div className="new_expense_container">
-          <div className="close_icon">
-            <button onClick={() => setHide(!hide)}>
-              <CgClose />
-            </button>
-          </div>
+        <div className="new_expense_form_wrapper">
+          <div className="new_expense_container">
+            <div className="end_close_icon">
+              <button className="button_close_icon" onClick={() => setHide(!hide)}>
+                <CgClose />
+              </button>
+            </div>
+            <h1 className="new_expense_heading">New Expense</h1>
+            <form onSubmit={onSubmit}>
+              <div className="form_container">
+                <label className="form_label"> Expense</label>
 
-          <h1 className="new_expense_heading">New Expense</h1>
-          <form onSubmit={onSubmit}>
-            <div className="form_container">
-              <label className="form_input">
-                Expense
                 <input
                   type="text"
+                  className="form_input"
                   required
                   value={expense}
                   onChange={(e) => setExpense(e.target.value)}
                 />
-              </label>
-              <label className="form_input">
-                Amount
+
+                <label className="form_label">Amount </label>
+
                 <input
                   type="number"
+                  className="form_input"
                   required
                   value={amount}
                   onChange={(e) => setAmount(e.target.value)}
                 />
-              </label>
 
-              <label className="form_input">
-                Date
+                <label className="form_label">Date</label>
                 <input
-                  type="calender"
+                  type="date"
+                  className="form_input"
                   required
                   value={date}
                   onChange={(e) => setDate(e.target.value)}
                 />
-              </label>
 
-              <label className="form_input" id="select_category">
-                Category
+                <label className="form_label" id="select_category">
+                  Category
+                </label>
                 <select
                   name="Category"
+                  className="form_input"
                   value={category}
                   onChange={(e) => setCategory(e.target.value)}
                 >
@@ -87,35 +89,37 @@ export default function NewExpense(props: Props) {
                   <option value="food">Food</option>
                   <option value="rent">Rent</option>
                   <option value="salaries">Salaries</option>
-                  <option value="maintaine">Maintenance and Repairs</option>
+                  <option value="maintaine" className="form_input">
+                    Maintenance and Repairs
+                  </option>
                   <option value="others">others</option>
                 </select>
-              </label>
 
-              <label className="form_input">
-                Receipt
+                <label className="form_label">Receipt </label>
                 <input
                   type="file"
+                  className="form_input"
                   required
                   value={receipt}
                   onChange={(e) => setReceipt(e.target.value)}
                 />
-              </label>
 
-              <label className="form_input">
-                Status
+                <label className="form_label">Status </label>
                 <input
                   type="text"
+                  className="form_input"
                   required
                   value={status}
                   onChange={(e) => setStatus(e.target.value)}
                 />
-              </label>
-            </div>
-            <button value="submit" className="submit_button">
-              Submit
-            </button>
-          </form>
+              </div>
+              <div className="center_submit_button">
+                <button value="submit" className="submit_button">
+                  Submit
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
       )}
     </>
