@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import ExpenseList from '../../components/ExpenseList';
 import './style.scss';
 import { useTranslation } from 'react-i18next';
-import Navbar from '../../features/Navbar';
+import Navbar from '../../components/Navbar';
 import { FcMoneyTransfer } from 'react-icons/fc';
 import expenseImg from '../../assets/images/expense-img.jpeg';
 

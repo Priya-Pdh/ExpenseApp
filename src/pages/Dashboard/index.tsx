@@ -1,6 +1,6 @@
 import React from 'react';
 import './style.scss';
-import Navbar from '../../features/Navbar';
+import Navbar from '../../components/Navbar';
 import { useTranslation } from 'react-i18next';
 
 function Dashboard() {

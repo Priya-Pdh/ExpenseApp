@@ -27,15 +27,15 @@
   a {
     color: white;
     text-decoration: none;
-    transition: all 0.1s ease;
-  }
+    transition: all 0.15s ease;
 
-  a:hover {
-    color: rgb(197, 197, 197);
-  }
+    &:hover {
+      color: rgb(197, 197, 197);
+    }
 
-  a:active {
-    color: grey;
+    &:active {
+      color: grey;
+    }
   }
 
   hr {
@@ -61,5 +61,27 @@
 
   .spacer {
     flex: 1;
+  }
+
+  li:last-child {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    transition: all 0.15s ease;
+    cursor: pointer;
+
+    &:hover {
+      color: rgb(197, 197, 197);
+    }
+
+    &:active {
+      color: grey;
+    }
   }
 }
