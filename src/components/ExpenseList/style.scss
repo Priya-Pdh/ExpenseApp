@@ -1,14 +1,27 @@
  table {
     width: 70%;
-    margin: 5% 0 10% 10%;
-    color: black;    
- }
+    margin: 5% 0 10% 10%; 
+ 
  th, td {
-    border: 1px solid gray;
+    border: 1px solid lightgray;
+    border-top: none;
+    border-left: none;
+    border-right: none ;
     overflow: hidden;
     text-align: left;
     height: 25px;
     font-size: 15px;
+    
+  }
+  
+  th {
+    line-height: 50px;
+    vertical-align: middle;
+  }
+
+  .header_icon {
+    vertical-align: middle;
   }
 
 
+}

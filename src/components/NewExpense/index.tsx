@@ -95,7 +95,7 @@ export default function NewExpense(props: Props) {
                   <option value="others">others</option>
                 </select>
 
-                <label className="form_label">Receipt </label>
+                <label className="form_label">Receipt</label>
                 <input
                   type="file"
                   className="form_input"

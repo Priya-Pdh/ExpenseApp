@@ -23,24 +23,24 @@ export default function ExpenseList(props: ExpenseListProps) {
       <div className="table_container">
         <table className="table_wrapper">
           <thead>
-            <tr>
-              <th>{t('expense')}</th>
-              <th>
-                <BsHash /> {t('amount')}
-              </th>
-              <th>
-                <BiCategory /> {t('category')}
-              </th>
-              <th>
-                <CgCalendarDates /> {t('date')}
-              </th>
-              <th>
-                <GrAttachment /> {t('receipt')}
-              </th>
-              <th>
-                <TbLoader /> {t('status')}
-              </th>
-            </tr>
+           <tr>
+            <th>{t('expense')}</th>
+            <th>
+              <BsHash className="header_icon" /> {t('amount')}
+            </th>
+            <th>
+              <BiCategory className="header_icon" /> {t('category')}
+            </th>
+            <th>
+              <CgCalendarDates className="header_icon" /> {t('date')}
+            </th>
+            <th>
+              <GrAttachment className="header_icon" /> {t('receipt')}
+            </th>
+            <th>
+              <TbLoader className="header_icon" /> {t('status')}
+            </th>
+          </tr>
           </thead>
           <tbody>
             <tr>
@@ -60,6 +60,7 @@ export default function ExpenseList(props: ExpenseListProps) {
                   <td>{expense.category}</td>
                   <td>{expense.date}</td>
                   <td>{expense.receipt}</td>
+                  <td>{expense.status}</td>
                 </tr>
               );
             })}
