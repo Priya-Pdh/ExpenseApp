@@ -22,47 +22,50 @@ export default function ExpenseList(props: ExpenseListProps) {
     <>
       <div className="table_container">
         <table className="table_wrapper">
-          <tr>
-            <th>{t('expense')}</th>
-            <th>
-              <BsHash /> {t('amount')}
-            </th>
-            <th>
-              <BiCategory /> {t('category')}
-            </th>
-            <th>
-              <CgCalendarDates /> {t('date')}
-            </th>
-            <th>
-              <GrAttachment /> {t('receipt')}
-            </th>
-            <th>
-              {' '}
-              <TbLoader /> {t('status')}
-            </th>
-          </tr>
-          <tr>
-            <td>Mouse</td>
-            <td>250</td>
-            <td>Electronics</td>
-            <td>2023-01-25</td>
-            <td />
-            <td>Pending</td>
-          </tr>
+          <thead>
+            <tr>
+              <th>{t('expense')}</th>
+              <th>
+                <BsHash /> {t('amount')}
+              </th>
+              <th>
+                <BiCategory /> {t('category')}
+              </th>
+              <th>
+                <CgCalendarDates /> {t('date')}
+              </th>
+              <th>
+                <GrAttachment /> {t('receipt')}
+              </th>
+              <th>
+                <TbLoader /> {t('status')}
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Mouse</td>
+              <td>250</td>
+              <td>Electronics</td>
+              <td>2023-01-25</td>
+              <td />
+              <td>Pending</td>
+            </tr>
 
-          {expenseList.map((expense) => {
-            return (
-              <tr key={expense.id}>
-                <td>{expense.expense}</td>
-                <td>{expense.amount}</td>
-                <td>{expense.category}</td>
-                <td>{expense.date}</td>
-                <td>{expense.receipt}</td>
-              </tr>
-            );
-          })}
+            {expenseList.map((expense) => {
+              return (
+                <tr key={expense.id}>
+                  <td>{expense.expense}</td>
+                  <td>{expense.amount}</td>
+                  <td>{expense.category}</td>
+                  <td>{expense.date}</td>
+                  <td>{expense.receipt}</td>
+                </tr>
+              );
+            })}
 
-          <tr />
+            <tr />
+          </tbody>
         </table>
       </div>
     </>
