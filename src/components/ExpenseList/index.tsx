@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import './style.scss';
 import { useTranslation } from 'react-i18next';
 
@@ -19,7 +19,7 @@ export default function ExpenseList(props: ExpenseListProps) {
   const { t } = useTranslation();
 
   return (
-    <>
+    <Fragment>
       <div className="table_container">
         <table className="table_wrapper">
           <thead>
@@ -68,6 +68,6 @@ export default function ExpenseList(props: ExpenseListProps) {
           </tbody>
         </table>
       </div>
-    </>
+    </Fragment>
   );
 }

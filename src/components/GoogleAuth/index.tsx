@@ -7,17 +7,15 @@ export default function GoogleAuth() {
   const navigate = useNavigate();
 
   return (
-    <>
-      <GoogleLogin
-        onSuccess={(credentialResponse) => {
-          navigate('/dashboard');
-          console.log(credentialResponse);
-        }}
-        onError={() => {
-          navigate('/');
-          console.log('Login Failed');
-        }}
-      />
-    </>
+    <GoogleLogin
+      onSuccess={(credentialResponse) => {
+        navigate('/dashboard');
+        console.log(credentialResponse);
+      }}
+      onError={() => {
+        navigate('/');
+        console.log('Login Failed');
+      }}
+    />
   );
 }

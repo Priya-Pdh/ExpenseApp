@@ -34,7 +34,7 @@ export default function NewExpense(props: Props) {
   };
 
   return (
-    <>
+    <Fragment>
       {hide && (
         <div className="new_expense_form_wrapper">
           <div className="new_expense_container">
@@ -122,6 +122,6 @@ export default function NewExpense(props: Props) {
           </div>
         </div>
       )}
-    </>
+    </Fragment>
   );
 }
