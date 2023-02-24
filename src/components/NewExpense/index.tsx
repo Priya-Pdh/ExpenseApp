@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react';
+import React, { ChangeEvent, Fragment, useState } from 'react';
 import './style.scss';
 import { NewExpenseProps } from '../../types/Types';
 
@@ -13,7 +13,7 @@ export default function NewExpense(props: Props) {
   const [amount, setAmount] = useState('');
   const [date, setDate] = useState('');
   const [category, setCategory] = useState('');
-  const [receipt, setReceipt] = useState('');
+  const [receipt, setReceipt] = useState<string | undefined>('');
   const [status, setStatus] = useState('');
 
   const [hide, setHide] = useState(true);
@@ -32,6 +32,11 @@ export default function NewExpense(props: Props) {
       status: status,
     };
     onClick(data);
+  };
+
+  const handleSetReciept = (event: ChangeEvent<HTMLInputElement>) => {
+    const files = event.target.files;
+    setReceipt(files?.item(0)?.name);
   };
 
   return (
@@ -101,13 +106,7 @@ export default function NewExpense(props: Props) {
                 </select>
 
                 <label className="form_label">Receipt</label>
-                <input
-                  type="file"
-                  className="form_input"
-                  required
-                  value={receipt}
-                  onChange={(e) => setReceipt(e.target.value)}
-                />
+                <input type="file" className="form_input" required onChange={handleSetReciept} />
 
                 <label className="form_label">Status </label>
                 <input
