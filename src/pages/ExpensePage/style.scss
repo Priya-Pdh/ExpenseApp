@@ -10,6 +10,7 @@
     background-color: white;
     margin: 20px;
     box-shadow: 3px 3px 10px rgb(198, 198, 198);
+    position: relative;
   }
 
   .expense_page_header {
@@ -19,7 +20,7 @@
     display: flex;
     align-items: center;
     gap: 2%;
-    
+
   }
 
   .add_expense_button {
@@ -36,5 +37,3 @@
    }
 
 }
-
-
