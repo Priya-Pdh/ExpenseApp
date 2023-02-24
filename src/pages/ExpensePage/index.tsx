@@ -30,7 +30,9 @@ export default function ExpensePage() {
           + New Expense
         </button>
 
-        {showForm && <NewExpense onClick={addNewExpense} />}
+        {showForm && (
+          <NewExpense onClick={addNewExpense} showForm={showForm} setShowForm={setShowForm} />
+        )}
 
         <ExpenseList expenseList={newExpenseList} />
       </main>

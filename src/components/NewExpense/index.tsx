@@ -6,6 +6,8 @@ import { CgClose } from 'react-icons/cg';
 
 type Props = {
   onClick: (data: NewExpenseProps) => void;
+  showForm: boolean;
+  setShowForm: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
 export default function NewExpense(props: Props) {
@@ -15,8 +17,6 @@ export default function NewExpense(props: Props) {
   const [category, setCategory] = useState('');
   const [receipt, setReceipt] = useState<string | undefined>('');
   const [status, setStatus] = useState('');
-
-  const [hide, setHide] = useState(true);
 
   const { onClick } = props;
 
@@ -41,14 +41,14 @@ export default function NewExpense(props: Props) {
 
   return (
     <Fragment>
-      {hide && (
+      {props.showForm && (
         <div className="new_expense_form_wrapper" data-testid="main-expense-form-div">
           <div className="new_expense_container">
             <div className="end_close_icon">
               <button
                 className="button_close_icon"
                 data-testid="close-button"
-                onClick={() => setHide(!hide)}
+                onClick={() => props.setShowForm(false)}
               >
                 <CgClose />
               </button>
