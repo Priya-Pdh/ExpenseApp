@@ -3,6 +3,7 @@ import './style.scss';
 import { NewExpenseProps } from '../../types/Types';
 
 import { CgClose } from 'react-icons/cg';
+
 type Props = {
   onClick: (data: NewExpenseProps) => void;
 };
@@ -36,15 +37,19 @@ export default function NewExpense(props: Props) {
   return (
     <Fragment>
       {hide && (
-        <div className="new_expense_form_wrapper">
+        <div className="new_expense_form_wrapper" data-testid="main-expense-form-div">
           <div className="new_expense_container">
             <div className="end_close_icon">
-              <button className="button_close_icon" onClick={() => setHide(!hide)}>
+              <button
+                className="button_close_icon"
+                data-testid="close-button"
+                onClick={() => setHide(!hide)}
+              >
                 <CgClose />
               </button>
             </div>
             <h1 className="new_expense_heading">New Expense</h1>
-            <form onSubmit={onSubmit}>
+            <form onSubmit={onSubmit} data-testid="form-container">
               <div className="form_container">
                 <label className="form_label"> Expense</label>
 

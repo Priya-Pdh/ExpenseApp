@@ -52,9 +52,9 @@ export default function ExpenseList(props: ExpenseListProps) {
               <td>Pending</td>
             </tr>
 
-            {expenseList.map((expense) => {
+            {expenseList.map((expense, id) => {
               return (
-                <tr key={expense.id}>
+                <tr key={id}>
                   <td>{expense.expense}</td>
                   <td>{expense.amount}</td>
                   <td>{expense.category}</td>
@@ -64,8 +64,6 @@ export default function ExpenseList(props: ExpenseListProps) {
                 </tr>
               );
             })}
-
-            <tr />
           </tbody>
         </table>
       </div>
