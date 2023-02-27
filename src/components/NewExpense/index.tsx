@@ -32,6 +32,7 @@ export default function NewExpense(props: Props) {
       status: status,
     };
     onClick(data);
+    props.setShowForm(false);
   };
 
   const handleSetReciept = (event: ChangeEvent<HTMLInputElement>) => {
