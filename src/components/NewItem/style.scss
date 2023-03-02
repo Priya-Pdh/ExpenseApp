@@ -17,6 +17,7 @@
     background-color: #fff;
     padding: 2% 4% 2% 4%;
     width: 28vw;
+    animation: popup 0.5s ease-in-out backwards;
   }
 
   .new_expense_heading {
@@ -64,6 +65,12 @@
     .button_close_icon:hover {
       background-color: #d2042d;
     }
+  }
+
+  @keyframes popup {
+    0%{transform : translateY(200px)}
+    100%{transform : translateY(50px)}
+    
   }
 
 }
