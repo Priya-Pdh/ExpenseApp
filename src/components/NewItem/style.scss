@@ -11,6 +11,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow-y: hidden;
 
   .new_expense_container {
     position: absolute;
