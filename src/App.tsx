@@ -2,7 +2,7 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
-import ExpensePage from './pages/ExpensePage';
+import ExpensesPurchases from './pages/ExpensesPurchases';
 
 export default function App() {
   return (
@@ -10,7 +10,8 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/expensepage" element={<ExpensePage />} />
+        <Route path="/expenses" element={<ExpensesPurchases type="expense" />} />
+        <Route path="/requests" element={<ExpensesPurchases type="purchase" />} />
       </Routes>
     </>
   );

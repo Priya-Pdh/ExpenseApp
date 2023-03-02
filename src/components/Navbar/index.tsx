@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { NavLink } from 'react-router-dom';
 
 import { TbUserCircle } from 'react-icons/tb';
-import { AiOutlineDashboard } from 'react-icons/ai';
+import { TbDashboard } from 'react-icons/tb';
 import { TbReportMoney } from 'react-icons/tb';
 import { TbZoomMoney } from 'react-icons/tb';
 import { TbReportMedical } from 'react-icons/tb';
@@ -42,12 +42,12 @@ export default function Navbar() {
         <hr />
         <li>
           <NavLink to="/dashboard" className="navlink">
-            <AiOutlineDashboard />
+            <TbDashboard />
             {t('dashboard')}
           </NavLink>
         </li>
         <li>
-          <NavLink to="/expensepage" className="navlink">
+          <NavLink to="/expenses" className="navlink">
             <TbReportMoney />
             {t('expense_reports')}
           </NavLink>
@@ -68,7 +68,7 @@ export default function Navbar() {
         <li>
           <NavLink to="/create-request" className="navlink">
             <TbZoomIn />
-            {t('create_purchase_request')}
+            {t('create_request')}
           </NavLink>
         </li>
         <div className="spacer" />

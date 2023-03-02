@@ -7,16 +7,15 @@
   "expense_reports": "Expense reports",
   "purchase_requests": "Purchase requests",
   "report_expense": "Report expense",
-  "create_purchase_request": "Create request",
+  "create_request": "Create request",
   "last_entries": "Last 10 entries",
   "month_overview": "Monthly overview",
 
-  "expense_tracker":"Expense Tracker",
-
-  "expense":"Expense",
-  "amount":"Amount",
+  "item":"Item",
+  "price":"Price",
   "date":"Date",
   "category":"Category",
   "receipt":"Receipt",
-  "status":"Status"
+  "status":"Status",
+  "submit":"Submit"
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import { fireEvent, render } from '@testing-library/react';
-import NewExpense from '../../components/NewExpense';
+import NewItem from '../../components/NewItem';
 
 describe('New Expense component', () => {
   test('submit button to be called on click', () => {
@@ -8,7 +8,7 @@ describe('New Expense component', () => {
     const showForm = true;
     const setShowForm = jest.fn();
     const { getByTestId } = render(
-      <NewExpense onClick={onSubmit} showForm={showForm} setShowForm={setShowForm} />
+      <NewItem type="expense" onClick={onSubmit} showForm={showForm} setShowForm={setShowForm} />
     );
 
     const form = getByTestId('form-container');

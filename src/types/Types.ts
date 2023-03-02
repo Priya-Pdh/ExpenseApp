@@ -1,8 +1,8 @@
-export type NewExpenseProps = {
+export type listProps = {
   id: string;
-  expense: string;
-  amount?: string;
-  date?: string;
+  item: string;
+  price: string;
+  date: string;
   category: string;
   receipt?: string;
   status: string;

@@ -1,21 +1,25 @@
 import React from 'react';
 import { fireEvent, render, screen } from '../../test-utils';
-import ExpensePage from '../../pages/ExpensePage';
+import ExpensesPurchases from '../../pages/ExpensesPurchases';
 
 describe('Expense component', () => {
   test('Should have a button', () => {
-    render(<ExpensePage />);
-    const buttonElement = screen.getByText('+ New Expense');
+    render(<ExpensesPurchases type="expense" />);
+    const buttonElement = screen.getByRole('button', {
+      name: /Report expense/i,
+    });
     expect(buttonElement).toBeInTheDocument();
   });
 
   test('Should open form on click', () => {
-    const { getByText, queryByTestId, getByTestId } = render(<ExpensePage />);
+    const { getByRole, queryByTestId, getByTestId } = render(<ExpensesPurchases type="expense" />);
 
     const form = queryByTestId('form-container');
     expect(form).toBeNull();
 
-    const addButton = getByText('+ New Expense');
+    const addButton = getByRole('button', {
+      name: /Report expense/i,
+    });
     fireEvent.click(addButton);
 
     const formContainer = getByTestId('form-container');

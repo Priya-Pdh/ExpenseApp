@@ -1,0 +1,47 @@
+@import '../../styles/_colors.scss';
+
+.expense_page {
+  height: 100vh;
+  background-color: $background_color;
+  display: flex;
+
+  .expense_page_wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  .expense_page_container {
+    background-color: white;
+    margin: 20px;
+    box-shadow: 3px 3px 10px rgb(198, 198, 198);
+    position: relative;
+  }
+
+  header {
+    padding: 10px;
+    font-size: 2rem;
+    border-bottom: 2px solid $secondary_color;
+    color: gray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .new_item {
+    background-color: $primary_color;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    transition: all 0.15s ease;
+
+    &:hover {
+      background-color: #2E5A88;
+    }
+
+    &:active {
+      background-color: $primary_color;
+    }
+  }
+}

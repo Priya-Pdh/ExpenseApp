@@ -7,16 +7,15 @@
   "expense_reports": "Utgiftsrapporter",
   "purchase_requests": "Köpförfrågningar",
   "report_expense": "Rapportera utgift",
-  "create_purchase_request": "Skapa köpförfrågan",
+  "create_request": "Skapa köpförfrågan",
   "last_entries": "Senaste 10 inlägg",
   "month_overview": "Månadsöversikt",
 
-  "expense_tracker":"Utgiftsspårare",
-
-  "expense":"Bekostnad",
-  "amount":"Belopp",
+  "item":"Artikel",
+  "price":"Pris",
   "date":"Datum",
   "category":"Kategori",
-  "receipt":"Mottagande",
-  "status":"Status"
+  "receipt":"Kvitto",
+  "status":"Status",
+  "submit":"Skicka in"
 }
