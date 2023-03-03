@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
 import List from '../../components/List';
 import './style.scss';
-import { useTranslation } from 'react-i18next';
 import Navbar from '../../components/Navbar';
 
 import { listProps } from '../../types/Types';
 import NewItem from '../../components/NewItem';
 
 type pageProps = {
-  type: 'expense' | 'purchase';
+  type: 'expense_reports' | 'purchase_requests';
 };
 
 export default function ExpensesPurchases(props: pageProps) {
@@ -23,8 +22,6 @@ export default function ExpensesPurchases(props: pageProps) {
   ] as listProps[]);
   const [showForm, setShowForm] = useState(false);
 
-  const { t } = useTranslation();
-
   const addNewExpense = (data: listProps) => {
     setExpenseList([...expenseList, data]);
   };
@@ -33,13 +30,12 @@ export default function ExpensesPurchases(props: pageProps) {
       <Navbar />
       <div className="expense_page_wrapper">
         <main className="expense_page_container">
-          <header>
-            {props.type === 'expense' ? t('expense_reports') : t('purchase_requests')}
-            <button className="new_item" onClick={() => setShowForm(!showForm)}>
-              {props.type === 'expense' ? t('report_expense') : t('create_request')}
-            </button>
-          </header>
-
+          <List
+            list={expenseList}
+            type={props.type}
+            showForm={showForm}
+            setShowForm={setShowForm}
+          />
           {showForm && (
             <NewItem
               type={props.type}
@@ -48,8 +44,6 @@ export default function ExpensesPurchases(props: pageProps) {
               setShowForm={setShowForm}
             />
           )}
-
-          <List list={expenseList} type={props.type} />
         </main>
       </div>
     </div>

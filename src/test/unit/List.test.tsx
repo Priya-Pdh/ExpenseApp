@@ -7,7 +7,7 @@ describe('ExpenseList Component', () => {
     const props = [
       { id: '', item: '', category: '', status: '', date: '', price: '', receipt: '' },
     ];
-    render(<List list={props} type="expense" />);
+    render(<List list={props} type="expense_reports" />);
     const tableHeaders = screen.getAllByRole('columnheader');
 
     expect(tableHeaders.length).toBe(6);

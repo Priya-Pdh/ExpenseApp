@@ -8,8 +8,8 @@
   "purchase_requests": "Köpförfrågningar",
   "report_expense": "Rapportera utgift",
   "create_request": "Skapa köpförfrågan",
-  "last_entries": "Senaste 10 inlägg",
-  "month_overview": "Månadsöversikt",
+  "recent_entries": "Senaste inlägg",
+  "monthly_overview": "Månadsöversikt",
 
   "item":"Artikel",
   "price":"Pris",

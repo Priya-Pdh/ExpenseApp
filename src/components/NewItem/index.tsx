@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 import { CgClose } from 'react-icons/cg';
 
 type Props = {
-  type: 'expense' | 'purchase';
+  type: 'expense_reports' | 'purchase_requests';
   onClick: (data: listProps) => void;
   showForm: boolean;
   setShowForm: React.ComponentState;
@@ -54,7 +54,7 @@ export default function NewItem(props: Props) {
           </button>
         </div>
         <h1 className="new_expense_heading">
-          {props.type === 'expense' ? t('report_expense') : t('create_request')}
+          {props.type === 'expense_reports' ? t('report_expense') : t('create_request')}
         </h1>
         <form onSubmit={onSubmit} data-testid="form-container">
           <div className="form_container">
@@ -107,7 +107,7 @@ export default function NewItem(props: Props) {
               <option value="others">others</option>
             </select>
 
-            {props.type === 'expense' && (
+            {props.type === 'expense_reports' && (
               <Fragment>
                 <label className="form_label">{t('receipt')}</label>
                 <input type="file" className="form_input" required onChange={handleSetReciept} />

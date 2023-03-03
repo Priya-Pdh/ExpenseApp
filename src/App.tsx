@@ -10,8 +10,8 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/expenses" element={<ExpensesPurchases type="expense" />} />
-        <Route path="/requests" element={<ExpensesPurchases type="purchase" />} />
+        <Route path="/expenses" element={<ExpensesPurchases type="expense_reports" />} />
+        <Route path="/requests" element={<ExpensesPurchases type="purchase_requests" />} />
       </Routes>
     </>
   );

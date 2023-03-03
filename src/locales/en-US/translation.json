@@ -8,8 +8,8 @@
   "purchase_requests": "Purchase requests",
   "report_expense": "Report expense",
   "create_request": "Create request",
-  "last_entries": "Last 10 entries",
-  "month_overview": "Monthly overview",
+  "recent_entries": "Recent entries",
+  "monthly_overview": "Monthly overview",
 
   "item":"Item",
   "price":"Price",

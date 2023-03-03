@@ -4,7 +4,7 @@ import ExpensesPurchases from '../../pages/ExpensesPurchases';
 
 describe('Expense component', () => {
   test('Should have a button', () => {
-    render(<ExpensesPurchases type="expense" />);
+    render(<ExpensesPurchases type="expense_reports" />);
     const buttonElement = screen.getByRole('button', {
       name: /Report expense/i,
     });
@@ -12,7 +12,9 @@ describe('Expense component', () => {
   });
 
   test('Should open form on click', () => {
-    const { getByRole, queryByTestId, getByTestId } = render(<ExpensesPurchases type="expense" />);
+    const { getByRole, queryByTestId, getByTestId } = render(
+      <ExpensesPurchases type="expense_reports" />
+    );
 
     const form = queryByTestId('form-container');
     expect(form).toBeNull();

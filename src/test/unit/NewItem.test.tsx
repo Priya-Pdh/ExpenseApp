@@ -8,7 +8,12 @@ describe('New Expense component', () => {
     const showForm = true;
     const setShowForm = jest.fn();
     const { getByTestId } = render(
-      <NewItem type="expense" onClick={onSubmit} showForm={showForm} setShowForm={setShowForm} />
+      <NewItem
+        type="expense_reports"
+        onClick={onSubmit}
+        showForm={showForm}
+        setShowForm={setShowForm}
+      />
     );
 
     const form = getByTestId('form-container');
