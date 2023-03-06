@@ -7,3 +7,5 @@ export type listProps = {
   receipt?: string;
   status: string;
 };
+
+export type formType = 'expense_reports' | 'purchase_requests' | 'hidden';

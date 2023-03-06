@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import List from '../../components/List';
 import './style.scss';
 import Navbar from '../../components/Navbar';
 
-import { listProps } from '../../types/Types';
+import { listProps, formType } from '../../types/Types';
 import NewItem from '../../components/NewItem';
 
 type pageProps = {
@@ -20,14 +20,19 @@ export default function ExpensesPurchases(props: pageProps) {
       status: 'Pending',
     },
   ] as listProps[]);
-  const [showForm, setShowForm] = useState(false);
+  const [showForm, setShowForm] = useState<formType>('hidden');
 
   const addNewExpense = (data: listProps) => {
     setExpenseList([...expenseList, data]);
   };
+
+  useEffect(() => {
+    setShowForm('hidden');
+  }, [props.type]);
+
   return (
     <div className="expense_page">
-      <Navbar />
+      <Navbar setShowForm={setShowForm} />
       <div className="expense_page_wrapper">
         <main className="expense_page_container">
           <List
@@ -36,13 +41,8 @@ export default function ExpensesPurchases(props: pageProps) {
             showForm={showForm}
             setShowForm={setShowForm}
           />
-          {showForm && (
-            <NewItem
-              type={props.type}
-              onClick={addNewExpense}
-              showForm={showForm}
-              setShowForm={setShowForm}
-            />
+          {showForm !== 'hidden' && (
+            <NewItem type={showForm} onClick={addNewExpense} setShowForm={setShowForm} />
           )}
         </main>
       </div>

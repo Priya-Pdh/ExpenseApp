@@ -9,12 +9,12 @@ import { TbCalendar } from 'react-icons/tb';
 import { TbReceipt } from 'react-icons/tb';
 import { TbLoader } from 'react-icons/tb';
 
-import { listProps } from '../../types/Types';
+import { listProps, formType } from '../../types/Types';
 
 type ListProps = {
   type: 'expense_reports' | 'purchase_requests' | 'recent_entries' | 'monthly_overview';
   list: listProps[];
-  showForm?: boolean;
+  showForm?: formType;
   setShowForm?: React.ComponentState;
 };
 
@@ -23,10 +23,10 @@ export default function List(props: ListProps) {
 
   return (
     <Fragment>
-      <header>
+      <header data-testid="header">
         {t(props.type)}
         {(props.type === 'expense_reports' || props.type === 'purchase_requests') && (
-          <button className="new_item" onClick={() => props.setShowForm(!props.showForm)}>
+          <button className="new_item" onClick={() => props.setShowForm(props.type)}>
             {props.type === 'expense_reports' ? t('report_expense') : t('create_request')}
           </button>
         )}

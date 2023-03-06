@@ -13,7 +13,11 @@ import { TbZoomIn } from 'react-icons/tb';
 import { TbLogout } from 'react-icons/tb';
 import { TbLanguage } from 'react-icons/tb';
 
-export default function Navbar() {
+type pageProps = {
+  setShowForm: React.ComponentState;
+};
+
+export default function Navbar(props: pageProps) {
   const { t, i18n } = useTranslation();
   const [lang, setLang] = useState(i18n.language);
 
@@ -60,16 +64,16 @@ export default function Navbar() {
         </li>
         <hr />
         <li>
-          <NavLink to="/report-expense" className="navlink">
+          <button className="navlink" onClick={() => props.setShowForm('expense_reports')}>
             <TbReportMedical />
             {t('report_expense')}
-          </NavLink>
+          </button>
         </li>
         <li>
-          <NavLink to="/create-request" className="navlink">
+          <button className="navlink" onClick={() => props.setShowForm('purchase_requests')}>
             <TbZoomIn />
             {t('create_request')}
-          </NavLink>
+          </button>
         </li>
         <div className="spacer" />
         <li>
@@ -77,7 +81,7 @@ export default function Navbar() {
             <TbLogout />
             {t('logout')}
           </NavLink>
-          <button className="navlink" onClick={changeLang}>
+          <button className="navlink lang_switcher" onClick={changeLang}>
             <TbLanguage />
             {lang}
           </button>

@@ -8,7 +8,6 @@ import { CgClose } from 'react-icons/cg';
 type Props = {
   type: 'expense_reports' | 'purchase_requests';
   onClick: (data: listProps) => void;
-  showForm: boolean;
   setShowForm: React.ComponentState;
 };
 
@@ -48,7 +47,7 @@ export default function NewItem(props: Props) {
           <button
             className="button_close_icon"
             data-testid="close-button"
-            onClick={() => props.setShowForm(false)}
+            onClick={() => props.setShowForm('hidden')}
           >
             <CgClose />
           </button>
