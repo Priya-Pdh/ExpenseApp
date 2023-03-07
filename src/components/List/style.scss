@@ -3,18 +3,18 @@
 table {
   margin: 10px;
   width: calc(100% - 20px);
-
   th {
     height: 50px;
     color: $text_color;
     text-align: left;
+    
   }
 
   th,
   td {
     border-bottom: 1px solid lightgray;
     min-width: 120px;
-    padding: 5px;
+    padding: 4px;
   }
 
   td {
@@ -27,6 +27,18 @@ table {
 
     svg {
       margin-right: 3px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    th,td {
+      min-width: 110px;
+    }
+  }
+  @media (max-width: 768px) {
+    th,td {
+      font-size: 12px;
+      min-width: 80px;
     }
   }
 }

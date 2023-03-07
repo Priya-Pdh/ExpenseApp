@@ -93,4 +93,42 @@
 
   }
 
+  @media (max-width: 1024px) {
+    .new_expense_heading {
+      font-size: 25px;
+      padding: 2%;
+    }
+    .form_label, .form_input {
+      font-size: 15px;
+    }
+    
+  }
+  @media (max-width: 768px) {
+    .new_expense_heading {
+      font-size: 20px;
+    }
+    .form_label, .form_input {
+      font-size: 12px;
+    }
+    .submit_button {
+      font-size: 11px;
+    }
+   
+  }
+  @media (max-width: 320px) {
+    .new_expense_heading {
+      font-size: 15px;
+    }
+    .new_expense_container {
+      width: 70vw;
+    }
+  
+    .form_label, .form_input {
+      font-size: 10px;
+    }
+    .submit_button {
+      font-size: 10px;
+      height: 3.5vh;
+    }
+  }
 }

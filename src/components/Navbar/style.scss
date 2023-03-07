@@ -85,8 +85,20 @@
       color: grey;
     }
   }
-
   .lang_switcher {
     font-size: 1rem;
   }
+  
+  @media (max-width: 768px) {
+    .navlink {
+      font-size: 14px;
+    }
+  }
+
+  @media (max-width: 320px) {
+    .navlink {
+      font-size: 10px;
+    }
+  }
+ 
 }
