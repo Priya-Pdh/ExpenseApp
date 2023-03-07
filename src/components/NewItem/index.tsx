@@ -3,7 +3,7 @@ import './style.scss';
 import { listProps } from '../../types/Types';
 import { useTranslation } from 'react-i18next';
 
-import { CgClose } from 'react-icons/cg';
+import { TbCircleX } from 'react-icons/tb';
 
 type Props = {
   type: 'expense_reports' | 'purchase_requests';
@@ -23,6 +23,7 @@ export default function NewItem(props: Props) {
 
   const onSubmit = (e: React.SyntheticEvent) => {
     e.preventDefault();
+    setStatus('Pending');
     const data: listProps = {
       id: new Date().toJSON.toString(),
       item,
@@ -49,7 +50,7 @@ export default function NewItem(props: Props) {
             data-testid="close-button"
             onClick={() => props.setShowForm('hidden')}
           >
-            <CgClose />
+            <TbCircleX />
           </button>
         </div>
         <h1 className="new_expense_heading">
@@ -112,15 +113,6 @@ export default function NewItem(props: Props) {
                 <input type="file" className="form_input" required onChange={handleSetReciept} />
               </Fragment>
             )}
-
-            <label className="form_label">{t('status')}</label>
-            <input
-              type="text"
-              className="form_input"
-              required
-              value={status}
-              onChange={(e) => setStatus(e.target.value)}
-            />
           </div>
           <div className="center_submit_button">
             <button value="submit" className="submit_button">

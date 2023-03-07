@@ -31,10 +31,10 @@ export default function ExpensesPurchases(props: pageProps) {
   }, [props.type]);
 
   return (
-    <div className="expense_page">
+    <div className="expenses_purchases">
       <Navbar setShowForm={setShowForm} />
-      <div className="expense_page_wrapper">
-        <main className="expense_page_container">
+      <div className="expenses_purchases_wrapper">
+        <main className="expenses_purchases_container">
           <List
             list={expenseList}
             type={props.type}

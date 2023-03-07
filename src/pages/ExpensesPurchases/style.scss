@@ -1,19 +1,20 @@
 @import '../../styles/_colors.scss';
 
-.expense_page {
+.expenses_purchases {
   height: 100vh;
   background-color: $background_color;
   display: flex;
 
-  .expense_page_wrapper {
+  .expenses_purchases_wrapper {
     flex: 1;
     display: flex;
     justify-content: center;
   }
 
-  .expense_page_container {
+  .expenses_purchases_container {
+    flex: 1;
     background-color: white;
-    margin: 20px;
+    margin: 20px 30px;
     box-shadow: 3px 3px 10px rgb(198, 198, 198);
     position: relative;
   }

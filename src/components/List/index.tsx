@@ -35,24 +35,36 @@ export default function List(props: ListProps) {
         <thead>
           <tr>
             <th>
-              <TbBox className="header_icon" /> {t('item')}
+              <div className="header_icon">
+                <TbBox /> {t('item')}
+              </div>
             </th>
             <th>
-              <TbCurrencyDollar className="header_icon" /> {t('price')}
+              <div className="header_icon">
+                <TbCurrencyDollar /> {t('price')}
+              </div>
             </th>
             <th>
-              <TbTag className="header_icon" /> {t('category')}
+              <div className="header_icon">
+                <TbTag /> {t('category')}
+              </div>
             </th>
             <th>
-              <TbCalendar className="header_icon" /> {t('date')}
+              <div className="header_icon">
+                <TbCalendar /> {t('date')}
+              </div>
             </th>
             {props.type === 'expense_reports' && (
               <th>
-                <TbReceipt className="header_icon" /> {t('receipt')}
+                <div className="header_icon">
+                  <TbReceipt /> {t('receipt')}
+                </div>
               </th>
             )}
             <th>
-              <TbLoader className="header_icon" /> {t('status')}
+              <div className="header_icon">
+                <TbLoader /> {t('status')}
+              </div>
             </th>
           </tr>
         </thead>
