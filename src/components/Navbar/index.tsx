@@ -4,7 +4,6 @@ import logo from '../../assets/images/logo-hs.png';
 import { useTranslation } from 'react-i18next';
 import { NavLink } from 'react-router-dom';
 
-import { TbUserCircle } from 'react-icons/tb';
 import { TbDashboard } from 'react-icons/tb';
 import { TbReportMoney } from 'react-icons/tb';
 import { TbZoomMoney } from 'react-icons/tb';
@@ -36,12 +35,6 @@ export default function Navbar(props: pageProps) {
       <ul className="navlist">
         <li>
           <img src={logo} alt="hyperstack logo" />
-        </li>
-        <li>
-          <div className="navlink">
-            <TbUserCircle />
-            Jane Doe
-          </div>
         </li>
         <hr />
         <li>

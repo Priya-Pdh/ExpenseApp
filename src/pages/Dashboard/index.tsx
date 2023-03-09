@@ -3,6 +3,7 @@ import './style.scss';
 import Navbar from '../../components/Navbar';
 import List from '../../components/List';
 import Popup from '../../components/Popup';
+import AppBar from '../../components/AppBar';
 import { listProps, formType } from '../../types/Types';
 
 function Dashboard() {
@@ -30,6 +31,7 @@ function Dashboard() {
   return (
     <div className="dashboard">
       <Navbar setShowForm={setShowForm} />
+      <AppBar />
       <main>
         <section>
           <List list={expenseList} type="recent_entries" />

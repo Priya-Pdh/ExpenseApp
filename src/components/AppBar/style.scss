@@ -1,0 +1,19 @@
+@import '../../styles/_colors.scss';
+
+.appbar {
+  background-color: white;
+  box-shadow: 3px 0px 10px gray;
+  margin-left: 230px;
+  padding-right: 20px;
+  height: 60px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  p {
+    display: flex;
+    align-items: center;
+    color: $text_color;
+    font-size: 1.2rem;
+  }
+}

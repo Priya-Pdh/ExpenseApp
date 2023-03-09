@@ -2,6 +2,7 @@ import React, { useState, useEffect, useMemo } from 'react';
 import List from '../../components/List';
 import './style.scss';
 import Navbar from '../../components/Navbar';
+import AppBar from '../../components/AppBar';
 
 import { listProps, formType } from '../../types/Types';
 import Popup from '../../components/Popup';
@@ -51,6 +52,7 @@ export default function ExpensesPurchases(props: pageProps) {
   return (
     <div className="expenses_purchases">
       <Navbar setShowForm={setShowForm} />
+      <AppBar />
       <div className="expenses_purchases_wrapper">
         <main className="expenses_purchases_container">
           <List
