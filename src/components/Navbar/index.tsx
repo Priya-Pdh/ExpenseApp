@@ -29,7 +29,6 @@ export default function Navbar(props: pageProps) {
       setLang('en');
     }
   }
-
   return (
     <nav className="navbar">
       <ul className="navlist">

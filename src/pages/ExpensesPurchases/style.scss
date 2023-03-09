@@ -46,22 +46,29 @@
     }
   }
 
-  @media (max-width: 1024px) {
-    header {
-      font-size: 1.6rem;
-    }
-  }
+}
 
-  @media (max-width: 768px) {
-    header {
-      font-size: 1.2rem;
-    }
+@media (max-width: 1024px) {
+  header {
+    font-size: 1.6rem;
   }
+}
 
-  @media (max-width: 320px) {
-    header {
-      font-size: 1rem;
-    }
+@media (max-width: 768px) {
+  header {
+    font-size: 1.2rem;
   }
+}
 
+@media (max-width: 320px) {
+    .expenses_purchases {
+      display: inline-block;
+
+      header {
+        font-size: 1rem;
+      }
+      .expenses_purchases_wrapper {
+        height: 60%;
+      }
+  }
 }

@@ -23,4 +23,18 @@
     border-bottom: 2px solid $secondary_color;
     color: gray;
   }
+
 }
+
+  @media (max-width: 320px) {
+    .dashboard {
+      display: inline-block;
+
+      main {
+        height: 50%;
+        
+      }
+    }
+    
+  }
+  
