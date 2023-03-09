@@ -51,13 +51,13 @@ export default function Navbar(props: pageProps) {
           </NavLink>
         </li>
         <li>
-          <NavLink to="/expenses" className="navlink">
+          <NavLink to="/expense-reports" className="navlink">
             <TbReportMoney />
             {t('expense_reports')}
           </NavLink>
         </li>
         <li>
-          <NavLink to="/requests" className="navlink">
+          <NavLink to="/purchase-requests" className="navlink">
             <TbZoomMoney />
             {t('purchase_requests')}
           </NavLink>

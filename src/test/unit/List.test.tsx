@@ -5,7 +5,7 @@ import List from '../../components/List';
 describe('ExpenseList Component', () => {
   test('should show the table header', () => {
     const props = [
-      { id: '', item: '', category: '', status: '', date: '', price: '', receipt: '' },
+      { id: '', item: '', category: '', status: '', date: '', price: '', receipt: '', new: false },
     ];
     render(<List list={props} type="expense_reports" />);
     const tableHeaders = screen.getAllByRole('columnheader');

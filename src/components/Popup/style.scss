@@ -1,6 +1,6 @@
 @import '../../styles/_colors.scss';
 
-.new_expense_form_wrapper {
+.popup_form_wrapper {
   position: absolute;
   top: 0;
   width: 100%;
@@ -13,7 +13,7 @@
   overflow-y: hidden;
   animation: back_blur 0.5s ease;
 
-  .new_expense_container {
+  .popup_container {
     position: absolute;
     background-color: #fff;
     padding: 2% 4% 2% 4%;
@@ -22,7 +22,7 @@
     animation: popup 0.5s ease backwards;
   }
 
-  .new_expense_heading {
+  .popup_heading {
     margin-bottom: 5%;
     text-align: center;
     color: $alt_text;

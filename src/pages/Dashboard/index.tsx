@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './style.scss';
 import Navbar from '../../components/Navbar';
 import List from '../../components/List';
-import NewItem from '../../components/NewItem';
+import Popup from '../../components/Popup';
 import { listProps, formType } from '../../types/Types';
 
 function Dashboard() {
@@ -15,11 +15,16 @@ function Dashboard() {
       category: 'Electronics',
       date: '2023-01-25',
       status: 'Pending',
+      new: false,
     },
   ] as listProps[]);
 
   const addNewExpense = (data: listProps) => {
-    setExpenseList([...expenseList, data]);
+    const oldList = expenseList.map((item) => {
+      item.new = false;
+      return item;
+    });
+    setExpenseList([...oldList, data]);
   };
 
   return (
@@ -33,7 +38,7 @@ function Dashboard() {
           <List list={expenseList} type="monthly_overview" />
         </section>
         {showForm !== 'hidden' && (
-          <NewItem type={showForm} onClick={addNewExpense} setShowForm={setShowForm} />
+          <Popup type={showForm} onClick={addNewExpense} setShowForm={setShowForm} />
         )}
       </main>
     </div>

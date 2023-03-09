@@ -3,11 +3,12 @@
 table {
   margin: 10px;
   width: calc(100% - 20px);
+
   th {
     height: 50px;
     color: $text_color;
     text-align: left;
-    
+
   }
 
   th,
@@ -21,6 +22,30 @@ table {
     color: $dark_text;
   }
 
+  .new {
+    background-color: $secondary_color;
+    animation: new_flash 0.3s ease;
+  }
+
+  @keyframes new_flash {
+    0% {
+      background-color: inherit;
+    }
+
+    33% {
+      background-color: $secondary_color;
+    }
+
+    67% {
+      background-color: inherit;
+    }
+
+    100% {
+      background-color: $secondary_color;
+    }
+
+  }
+
   .header_icon {
     display: flex;
     align-items: center;
@@ -31,12 +56,17 @@ table {
   }
 
   @media (max-width: 1024px) {
-    th,td {
+
+    th,
+    td {
       min-width: 110px;
     }
   }
+
   @media (max-width: 768px) {
-    th,td {
+
+    th,
+    td {
       font-size: 12px;
       min-width: 80px;
     }

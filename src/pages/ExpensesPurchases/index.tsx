@@ -1,34 +1,52 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import List from '../../components/List';
 import './style.scss';
 import Navbar from '../../components/Navbar';
 
 import { listProps, formType } from '../../types/Types';
-import NewItem from '../../components/NewItem';
+import Popup from '../../components/Popup';
 
 type pageProps = {
   type: 'expense_reports' | 'purchase_requests';
 };
 
 export default function ExpensesPurchases(props: pageProps) {
-  const [expenseList, setExpenseList] = useState([
-    {
-      item: 'Mouse',
-      price: '250kr',
-      category: 'Electronics',
-      date: '2023-01-25',
-      status: 'Pending',
-    },
-  ] as listProps[]);
+  const listPlaceholder = useMemo(() => {
+    return [
+      {
+        item: 'Mouse',
+        price: '250',
+        category: 'Electronics',
+        date: '2023-01-25',
+        receipt: 'receipt.jpg',
+        status: 'Pending',
+        new: false,
+      },
+    ];
+  }, []);
+
+  const [expenseList, setExpenseList] = useState(listPlaceholder as listProps[]);
   const [showForm, setShowForm] = useState<formType>('hidden');
 
   const addNewExpense = (data: listProps) => {
-    setExpenseList([...expenseList, data]);
+    const oldList = expenseList.map((item) => {
+      item.new = false;
+      return item;
+    });
+    setExpenseList([...oldList, data]);
   };
 
+  const [wasSubmitted, setWasSubmitted] = useState(false);
+
   useEffect(() => {
-    setShowForm('hidden');
-  }, [props.type]);
+    if (wasSubmitted === false) {
+      setShowForm('hidden');
+      setExpenseList(listPlaceholder as listProps[]);
+    } else {
+      setShowForm('hidden');
+      setWasSubmitted(false);
+    }
+  }, [props.type, listPlaceholder, wasSubmitted]);
 
   return (
     <div className="expenses_purchases">
@@ -42,7 +60,12 @@ export default function ExpensesPurchases(props: pageProps) {
             setShowForm={setShowForm}
           />
           {showForm !== 'hidden' && (
-            <NewItem type={showForm} onClick={addNewExpense} setShowForm={setShowForm} />
+            <Popup
+              type={showForm}
+              onClick={addNewExpense}
+              setShowForm={setShowForm}
+              setWasSubmitted={setWasSubmitted}
+            />
           )}
         </main>
       </div>

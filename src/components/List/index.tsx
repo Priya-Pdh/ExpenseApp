@@ -69,15 +69,15 @@ export default function List(props: ListProps) {
           </tr>
         </thead>
         <tbody>
-          {props.list.map((expense, id) => {
+          {props.list.map((item, id) => {
             return (
-              <tr key={id}>
-                <td>{expense.item}</td>
-                <td>{expense.price}</td>
-                <td>{expense.category}</td>
-                <td>{expense.date}</td>
-                {props.type === 'expense_reports' && <td>{expense.receipt}</td>}
-                <td>{expense.status}</td>
+              <tr key={id} className={item.new ? 'new' : ''}>
+                <td>{item.item}</td>
+                <td>{item.price}</td>
+                <td>{item.category}</td>
+                <td>{item.date}</td>
+                {props.type === 'expense_reports' && <td>{item.receipt}</td>}
+                <td>{item.status}</td>
               </tr>
             );
           })}

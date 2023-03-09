@@ -6,6 +6,7 @@ export type listProps = {
   category: string;
   receipt?: string;
   status: string;
+  new: boolean;
 };
 
 export type formType = 'expense_reports' | 'purchase_requests' | 'hidden';

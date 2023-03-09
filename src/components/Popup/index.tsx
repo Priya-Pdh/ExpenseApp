@@ -2,6 +2,7 @@ import React, { ChangeEvent, Fragment, useState } from 'react';
 import './style.scss';
 import { listProps } from '../../types/Types';
 import { useTranslation } from 'react-i18next';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 import { TbCircleX } from 'react-icons/tb';
 
@@ -9,21 +10,24 @@ type Props = {
   type: 'expense_reports' | 'purchase_requests';
   onClick: (data: listProps) => void;
   setShowForm: React.ComponentState;
+  setWasSubmitted?: React.ComponentState;
 };
 
-export default function NewItem(props: Props) {
+export default function Popup(props: Props) {
   const [item, setItem] = useState('');
   const [price, setPrice] = useState('');
   const [date, setDate] = useState('');
   const [category, setCategory] = useState('');
   const [receipt, setReceipt] = useState<string | undefined>('');
-  const [status, setStatus] = useState('');
 
   const { t } = useTranslation();
 
+  const path = useLocation().pathname;
+  const navigate = useNavigate();
+
   const onSubmit = (e: React.SyntheticEvent) => {
     e.preventDefault();
-    setStatus('Pending');
+
     const data: listProps = {
       id: new Date().toJSON.toString(),
       item,
@@ -31,9 +35,18 @@ export default function NewItem(props: Props) {
       date,
       category,
       receipt,
-      status,
+      status: 'Pending',
+      new: true,
     };
     props.onClick(data);
+
+    if (path.slice(1).replace('-', '_') === props.type || path === '/dashboard') {
+      props.setShowForm('hidden');
+    } else {
+      navigate('/' + props.type.replace('_', '-'));
+      props.setWasSubmitted(true);
+      props.onClick(data);
+    }
   };
 
   const handleSetReciept = (event: ChangeEvent<HTMLInputElement>) => {
@@ -42,8 +55,8 @@ export default function NewItem(props: Props) {
   };
 
   return (
-    <div className="new_expense_form_wrapper" data-testid="main-expense-form-div">
-      <div className="new_expense_container">
+    <div className="popup_form_wrapper">
+      <div className="popup_container">
         <div className="end_close_icon">
           <button
             className="button_close_icon"
@@ -53,7 +66,7 @@ export default function NewItem(props: Props) {
             <TbCircleX />
           </button>
         </div>
-        <h1 className="new_expense_heading">
+        <h1 className="popup_heading">
           {props.type === 'expense_reports' ? t('report_expense') : t('create_request')}
         </h1>
         <form onSubmit={onSubmit} data-testid="form-container">
