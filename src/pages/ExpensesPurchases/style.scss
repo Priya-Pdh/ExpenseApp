@@ -63,12 +63,13 @@
 @media (max-width: 320px) {
     .expenses_purchases {
       display: inline-block;
+      // position: absolute;
 
       header {
         font-size: 1rem;
       }
       .expenses_purchases_wrapper {
-        height: 60%;
+        height: 100%;
       }
   }
 }

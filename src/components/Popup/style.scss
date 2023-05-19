@@ -108,7 +108,7 @@
   }
 
   @media (max-width: 1024px) {
-    .new_expense_heading {
+    .popup_heading {
       font-size: 25px;
       padding: 2%;
     }
@@ -121,7 +121,7 @@
   }
 
   @media (max-width: 768px) {
-    .new_expense_heading {
+    .popup_heading {
       font-size: 20px;
     }
 
@@ -137,22 +137,23 @@
   }
 
   @media (max-width: 320px) {
-    .new_expense_heading {
+    .popup_heading {
       font-size: 15px;
     }
 
-    .new_expense_container {
+    .popup_container {
       width: 70vw;
     }
 
     .form_label,
     .form_input {
       font-size: 10px;
+     
     }
 
     .submit_button {
       font-size: 10px;
-      height: 3vh;
+      height: 1%;
     }
   }
 }

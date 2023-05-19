@@ -9,6 +9,7 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  gap: 10%;
 
   p {
     display: flex;
@@ -16,4 +17,39 @@
     color: $text_color;
     font-size: 1.2rem;
   }
+
+  .hamburger_icon {
+    display: none;
+  }
+
 }
+
+@media (max-width: 320px) {
+
+  .appbar {
+    margin-left: 0;
+  
+
+    .hamburger_icon {
+      display: flex;
+      margin: 10px;
+      align-items: center;
+      cursor: pointer;
+      color: $primary_color;
+      
+    }
+   .hmbg_wrapper:hover {
+    width: 35px;
+    height: 35px;
+    border-radius: 100px;
+    background-color: $secondary_color;
+    
+    }
+}
+}
+
+
+
+
+
+

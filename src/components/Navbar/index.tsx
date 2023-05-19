@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import './style.scss';
 import logo from '../../assets/images/logo-hs.png';
 import { useTranslation } from 'react-i18next';
@@ -11,6 +11,7 @@ import { TbReportMedical } from 'react-icons/tb';
 import { TbZoomIn } from 'react-icons/tb';
 import { TbLogout } from 'react-icons/tb';
 import { TbLanguage } from 'react-icons/tb';
+import { HamburgerContext } from '../../context/hamburgerContext';
 
 type pageProps = {
   setShowForm: React.ComponentState;
@@ -19,6 +20,8 @@ type pageProps = {
 export default function Navbar(props: pageProps) {
   const { t, i18n } = useTranslation();
   const [lang, setLang] = useState(i18n.language);
+
+  const { isOpen } = useContext(HamburgerContext);
 
   function changeLang() {
     if (i18n.language === 'en') {
@@ -30,7 +33,7 @@ export default function Navbar(props: pageProps) {
     }
   }
   return (
-    <nav className="navbar">
+    <nav className={isOpen ? 'navbar navbar_hamburger' : 'navbar'}>
       <ul className="navlist">
         <li>
           <img src={logo} alt="hyperstack logo" />

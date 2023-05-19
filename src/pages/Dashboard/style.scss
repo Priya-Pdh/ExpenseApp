@@ -29,12 +29,15 @@
   @media (max-width: 320px) {
     .dashboard {
       display: inline-block;
-
+      
       main {
-        height: 50%;
+        margin-left: 20px;
         
       }
+      
     }
-    
+    // .navbar {
+    //   display: none;
+    // }
   }
   
